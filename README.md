@@ -16,3 +16,12 @@ When I type and send a message from any client, the message is first sent to the
 # Reflection 2.2
 
 To successfully change the port to 8080, we need to adjust the port settings in both the ```client.rs``` and ```server.rs``` files. It's important because the server and client sides of the application must listen and connect on the same port for the network communication to function properly. Mismatched settings will result in the clients failing to connect to the server. After modifying the port in the ```erver.rs``` file where the server listens for incoming connections, we must also update the corresponding port in the ```client.rs``` file. This ensures that the clients try to connect to the correct port. Aligning these settings is important for establishing a successful connection between the client and the server.
+
+# Reflection 2.3
+![Image 08-05-24 at 00 36](https://github.com/tvadhisti/advprog-module10-2/assets/127074983/4704df80-f00e-4179-92c6-4b232dab431f)
+![Image 08-05-24 at 00 36 (1)](https://github.com/tvadhisti/advprog-module10-2/assets/127074983/066e5aee-b764-40c6-a637-a1b7edcead45)
+![Image 08-05-24 at 00 36 (2)](https://github.com/tvadhisti/advprog-module10-2/assets/127074983/569008c9-0d13-4364-9b45-179fa5291675)
+
+
+
+We've recently improved our system by incorporating sender information into each message sent by a client. Now, each message includes the IP address and port number of the sender, details that can be clearly seen in the terminal output. This improvement was achieved by modifying the server's broadcasting functionality, ensuring that the sender's IP address and port from the addr variable are included whenever messages are sent to connected clients. As a result, this feature significantly improves the user experience. It allows each client to see not only the messages but also the source of those messages. This addition provides clarity and context, which are crucial in multi user communication. Overall, these changes make it easier for users to track conversations and understand who is participating.
