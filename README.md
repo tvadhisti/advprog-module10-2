@@ -13,4 +13,6 @@ What happens when I type some text in the clients:
 
 When I type and send a message from any client, the message is first sent to the server. The server, which is continuously listening for incoming data from connected clients, receives this message. Upon receipt, the server immediately broadcasts this message to all other clients that are connected to it. Each client then receives the message from the server and displays it in their respective terminals. This process ensures that every participant in the chat can see and respond to each message in realtime.
 
+# Reflection 2.2
 
+To successfully change the port to 8080, we need to adjust the port settings in both the ```client.rs``` and ```server.rs``` files. It's important because the server and client sides of the application must listen and connect on the same port for the network communication to function properly. Mismatched settings will result in the clients failing to connect to the server. After modifying the port in the ```erver.rs``` file where the server listens for incoming connections, we must also update the corresponding port in the ```client.rs``` file. This ensures that the clients try to connect to the correct port. Aligning these settings is important for establishing a successful connection between the client and the server.
